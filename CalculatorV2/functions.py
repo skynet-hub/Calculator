@@ -13,7 +13,10 @@ def subtract(n1, n2):
 #Function handles division
 def divide(n1, n2):
     '''Takes two numbers and return the results'''
-    return n1 / n2
+    if n2 == 0:
+        raise ZeroDivisionError('Cannot divide by zero')
+    else:
+        return n1 / n2
 
 #Function handles multipluication
 def multiply(n1, n2):

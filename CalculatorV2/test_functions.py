@@ -20,4 +20,13 @@ class TestOperators(unittest.TestCase):
         self.assertEqual(multiply(10, 10), 100) 
 
     def test_divide(self):
-        self.assertEqual(divide(15, 5), 3)       
+        self.assertEqual(divide(15, 5), 3)      
+        self.assertEqual(divide(15, 5), 3)
+
+
+    def divide_by_zero(self):        
+        with self.assertRaises(ZeroDivisionError):
+            divide(10, 0)
+
+if __name__ == '__main__':
+    unittest.main()
